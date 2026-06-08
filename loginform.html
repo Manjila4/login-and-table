@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Table</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      min-height: 100vh;
+      padding: 40px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      margin-bottom: 40px;
+    }
+
+    .login-box {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .login-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .table-section h2 {
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    th, td {
+      padding: 14px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background: #2563eb;
+      color: white;
+    }
+
+    tr:hover {
+      background: #f1f5f9;
+    }
+
+    .status {
+      padding: 6px 12px;
+      border-radius: 20px;
+      color: white;
+      font-size: 13px;
+    }
+
+    .active {
+      background: #16a34a;
+    }
+
+    .pending {
+      background: #f59e0b;
+    }
+
+    .inactive {
+      background: #dc2626;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      th, td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Login Form and User Table</h1>
+
+    <!-- Login Form -->
+    <div class="card login-box">
+      <h2>Login</h2>
+
+      <form>
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+      </form>
+    </div>
+
+    <!-- Table -->
+    <div class="card table-section">
+      <h2>User Information Table</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>S.N</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ram Sharma</td>
+            <td>ram@gmail.com</td>
+            <td>Admin</td>
+            <td><span class="status active">Active</span></td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Sita Thapa</td>
+            <td>sita@gmail.com</td>
+            <td>User</td>
+            <td><span class="status pending">Pending</span></td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>Hari K.C</td>
+            <td>hari@gmail.com</td>
+            <td>Editor</td>
+            <td><span class="status inactive">Inactive</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</body>
+</html>
